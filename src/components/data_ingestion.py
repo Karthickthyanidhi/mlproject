@@ -7,14 +7,14 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from dataclasses import dataclass#module in library  that provides a decorator and functions for automatically generating special methods such as __init__()
 
-'''from src.components.data_transformation import DataTransformation
+from src.components.data_transformation import DataTransformation
 from src.components.data_transformation import DataTransformationConfig
 
-from src.components.model_trainer import ModelTrainerConfig
-from src.components.model_trainer import ModelTrainer '''
+#from src.components.model_trainer import ModelTrainerConfig
+#from src.components.model_trainer import ModelTrainer 
 
-'''When you decorate a class with @dataclass, 
-Python automatically generates special methods like __init__(), __repr__(), __eq__(), __hash__(), and __str__() based on the class attributes.'''
+#When you decorate a class with @dataclass, 
+#Python automatically generates special methods like __init__(), __repr__(), __eq__(), __hash__(), and __str__() based on the class attributes.'''
 
 @dataclass # decorator
 class DataIngestionConfig:
@@ -58,10 +58,10 @@ class DataIngestion:
 if __name__=="__main__": # it is used to define the entry point of a script or module.
     obj=DataIngestion() #create the instance
     train_data,test_data=obj.initiate_data_ingestion()
-'''
+
     data_transformation=DataTransformation()
     train_arr,test_arr,_=data_transformation.initiate_data_transformation(train_data,test_data)
-
+'''
     modeltrainer=ModelTrainer()
     print(modeltrainer.initiate_model_trainer(train_arr,test_arr))'''
 
